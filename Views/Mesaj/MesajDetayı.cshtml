@@ -1,0 +1,35 @@
+﻿@using webprojesi.DAL.Entities
+@model Mesaj
+@{
+    ViewData["Title"] = "MesajDetayı";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<input type="hidden" asp-for="MesajId"/>
+
+<div></div> class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Mesajlar</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title"> Mesaj Detayları</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							<b>Gönderen:</b> @Model.AdSoyad
+							<br />
+							<b>E Posta:</b>  @Model.Eposta
+							<br />
+							<b>Tarih:</b>    @Model.GonderimTarihi
+							<br />
+						    <b>Mesaj:</b>    @Model.MesajDetay
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
